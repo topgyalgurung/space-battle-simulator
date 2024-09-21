@@ -1,0 +1,59 @@
+.main-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: space-around;
+  width: 100%;
+}
+.player,
+.active,
+.enemy {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  height: 30vh;
+}
+
+.player {
+  align-items: flex-start;
+  color: greenyellow;
+}
+.enemy {
+  align-items: flex-end;
+  color: red;
+}
+.attack button,
+.restart button {
+  width: 80px;
+  height: 80px;
+  color: #ffffff;
+  border: 10px solid #ff2727;
+  border-radius: 100%;
+  background-color: #ff9812;
+}
+.restart button {
+  border-color: #ffffff;
+  background-color: transparent;
+}
+.result-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin: 50px 0;
+  text-align: center;
+  border: 2px solid;
+}
