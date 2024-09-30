@@ -1,10 +1,19 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 import "./App.css";
 
-function App({ minDamage = 0, maxDamage = 30 }) {
+// to fix error: 'minDamage' and 'maxDamage' is missing in props validation
+// PropTypes are simply a mechanism that ensures that the passed value is of the correct datatype. This makes sure that we don’t receive an error at the very end of our app by the console which might not be easy to deal with.
+App.propTypes = {
+  minDamage: PropTypes.number,
+  maxDamage: PropTypes.number,
+}
+
+const App=({ minDamage = 0, maxDamage = 30 })=> {
   // task 1
   const INITIAL_HEALTH = 100;
+  
   const [playerHealth, setPlayerHealth] = useState(INITIAL_HEALTH);
   const [enemyHealth, setEnemyHealth] = useState(INITIAL_HEALTH);
 
